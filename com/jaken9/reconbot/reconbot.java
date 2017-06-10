@@ -23,7 +23,8 @@ public class reconbot
 {
 	
 	/*
-		This script was pieced together using limited knowledge of MCProtocol, 2 cups of coffee and example code provided in the MCProtocol library.
+		This script was pieced together using limited knowledge of MCProtocol, 2 cups of coffee 
+		and example code provided by the MCProtocol library.
 	
 	*/
 	
