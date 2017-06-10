@@ -1,0 +1,52 @@
+package org.spacehq.mc.protocol.packet.ingame.server.entity;
+
+import java.io.IOException;
+import org.spacehq.mc.protocol.util.NetUtil;
+import org.spacehq.opennbt.tag.builtin.CompoundTag;
+import org.spacehq.packetlib.io.NetInput;
+import org.spacehq.packetlib.io.NetOutput;
+import org.spacehq.packetlib.packet.Packet;
+
+public class ServerEntityNBTUpdatePacket
+  implements Packet
+{
+  private int entityId;
+  private CompoundTag tag;
+  
+  private ServerEntityNBTUpdatePacket() {}
+  
+  public ServerEntityNBTUpdatePacket(int entityId, CompoundTag tag)
+  {
+    this.entityId = entityId;
+    this.tag = tag;
+  }
+  
+  public int getEntityId()
+  {
+    return this.entityId;
+  }
+  
+  public CompoundTag getTag()
+  {
+    return this.tag;
+  }
+  
+  public void read(NetInput in)
+    throws IOException
+  {
+    this.entityId = in.readVarInt();
+    this.tag = NetUtil.readNBT(in);
+  }
+  
+  public void write(NetOutput out)
+    throws IOException
+  {
+    out.writeVarInt(this.entityId);
+    NetUtil.writeNBT(out, this.tag);
+  }
+  
+  public boolean isPriority()
+  {
+    return false;
+  }
+}
