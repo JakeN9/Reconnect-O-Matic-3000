@@ -11,10 +11,3 @@ If using this script please navigate to com.jaken9.reconbot.reconbot.java and en
 
 If you decide you’d like this bot to run 24/7 off a Raspberry Pi look into using Linux’s Crontab for the purposes of starting the script on server boot. 
 You may also consider rebooting the Raspberry Pi every hour.
-
-------   ---   ------  ---------   ------     ----  ---       ---    ---     ->
-                   -   - >             20 20 UPD.  ATE               ] -    ->
------  -----   ------   -------       ---  --  -----                        ------  ---- - - - ->
-
-( Minecraft.CVE.m1 )
-
